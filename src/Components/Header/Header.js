@@ -27,17 +27,13 @@ return (
               </Link>
             </CNavItem>
             <CNavItem>
-              <Link className="btn" to="/mybooking">My Bookings</Link>
+              {user.email?<Link className="btn" to="/mybooking">My Bookings</Link>:''}
             </CNavItem>
             <CNavItem>
-              <CNavLink href="#">
-                Manage All Bookings
-              </CNavLink>
+              {user.email? <Link className="btn" to="/managebooking">Manage All Bookings</Link>:''}
             </CNavItem>
             <CNavItem>
-              <Link className="btn" to="/addspot">
-                Add a Spot
-              </Link>
+              {user.email?<Link className="btn" to="/addspot">Add a Spot</Link>:''}
             </CNavItem>
             <span className="fs-5">{user.email && user.displayName}</span>
             {user.email? <CNavItem>

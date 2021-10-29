@@ -32,7 +32,7 @@ const PlaceOrder = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          swal("Well Done", "Your confirmed your booking", "success");
+          swal("Well Done", "Your booking is now confirmed", "success");
           reset();
         }
       });
@@ -98,7 +98,7 @@ const PlaceOrder = () => {
               )}
               <input
                 type="date"
-                className="form-control mt-2"
+                className="form-control mt-2 mb-3"
                 {...register("date", { required: true })}
               />
               {errors.date && (

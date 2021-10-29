@@ -30,20 +30,25 @@ const Mybooking = () => {
                 })
                 .then(res => res.json())
                 .then(data => {
-                    if(data.deleteCount === 1){
-                        swal('Success', 'You Have canceled your tour trip', 'warning')
+                    if(data.acknowledged){
+                        const remaining = bookings.filter(item => item._id !== id)
+                        setBookings(remaining)
+                        swal("Your Trip cancelled", {
+                            icon: "success",
+                          });
                     }
                     console.log(data)
                 })
-              swal("Your Trip cancelled", {
-                icon: "success",
-              });
+              
             } 
           });      
     }
     return (
         <div>
-            <h2 className="text-success text-center" style={{marginTop:'70px'}}>List of my bookings</h2>
+            <h2 className="text-success text-center" style={{margin:'70px 0'}}>List of my bookings</h2>
+            {
+            bookings.length === 0? <h4 className="text-center" style={{margin:'70px 0'}}>You have no bookings</h4> : ''
+            }
             <div className="container">
                 
             <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }}>

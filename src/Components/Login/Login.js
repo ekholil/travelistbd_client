@@ -5,14 +5,18 @@ import UseAuth from '../../Hooks/UseAuth';
 
 
 const Login = () => {
-    const {loginUsingGoogle, error} = UseAuth()
+    const {loginUsingGoogle, error, setIsLoading} = UseAuth()
     const location = useLocation()
     const history = useHistory()
     const redirect_uri = location.state?.from || '/home'
     const handleGoogleLogin = () => {
         loginUsingGoogle()
         .then((result) => {
+           setIsLoading(true)
            history.push(redirect_uri)
+        })
+        .finally(() => {
+            setIsLoading(false)
         })
     }
 
