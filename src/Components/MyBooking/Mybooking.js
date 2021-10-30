@@ -7,7 +7,7 @@ const Mybooking = () => {
     const [bookings, setBookings] = useState([])
     const {user} = UseAuth()
     useEffect(() => {
-        fetch(`http://localhost:5000/mybookings/${user.email}`)
+        fetch(`https://obscure-river-55852.herokuapp.com/mybookings/${user.email}`)
         .then(res => res.json())
         .then(data => {
             setBookings(data)
@@ -49,13 +49,13 @@ const Mybooking = () => {
             {
             bookings.length === 0? <h4 className="text-center" style={{margin:'70px 0'}}>You have no bookings</h4> : ''
             }
-            <div className="container">
+            <div className="container mb-5">
                 
             <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }}>
                 {
                     bookings.map(item => <div>
 
-<CCol xs>
+                <CCol xs>
                     <CCard>
                     <CCardImage orientation="top" src={item.imgurl} />
                     <CCardBody>

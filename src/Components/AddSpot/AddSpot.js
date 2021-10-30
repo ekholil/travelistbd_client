@@ -29,10 +29,10 @@ const AddSpot = () => {
   return (
     <div>
       <h1 className="text-center text-success" style={{marginTop:'70px'}}>Add a new Traveling Spot</h1>
-      <div className="mt-5 d-flex justify-content-center">
+      <div className="mt-5">
         <form
-          className="d-flex flex-column"
-          style={{ width: "400px" }}
+          className="d-flex flex-column  mx-auto"
+          style={{ maxWidth: "400px" }}
           onSubmit={handleSubmit(onSubmit)}
         >
           <input

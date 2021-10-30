@@ -57,8 +57,8 @@ const PlaceOrder = () => {
           </div>
           <div className="col-md-6">
             <form
-              className="d-flex flex-column"
-              style={{ width: "400px" }}
+              className="d-flex flex-column mx-auto mt-4"
+              style={{ maxWidth: "400px" }}
               onSubmit={handleSubmit(onSubmit)}
             >
               <input
