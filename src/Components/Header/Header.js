@@ -37,7 +37,7 @@ return (
             </CNavItem>
             <span className="fs-5">{user.email && user.displayName}</span>
             {user.email? <CNavItem>
-                <button onClick={logOut} className="ms-3 btn btn-danger">
+                <button onClick={logOut} className="ms-3 text-white btn btn-danger">
                     Log out
                 </button>
             </CNavItem> : <CNavItem>

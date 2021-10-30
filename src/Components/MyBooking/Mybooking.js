@@ -24,7 +24,7 @@ const Mybooking = () => {
           })
           .then((willDelete) => {
             if (willDelete) {
-                fetch(`http://localhost:5000/mybookings/${id}`, {
+                fetch(`https://obscure-river-55852.herokuapp.com/mybookings/${id}`, {
                     method: 'DELETE', 
                     headers: {'content-type' : 'application/json'}
                 })

@@ -14,7 +14,7 @@ const PlaceOrder = () => {
   const {id} = useParams()
   const [spot, setSpot] = useState({})
   useEffect(() => {
-    fetch(`http://localhost:5000/spots/${id}`)
+    fetch(`https://obscure-river-55852.herokuapp.com/spots/${id}`)
     .then(res => res.json())
     .then(data => setSpot(data))
   }, [])
@@ -24,7 +24,7 @@ const PlaceOrder = () => {
       data.spotname = spot?.name
       data.imgurl = spot?.imgurl
       data.status = 'pending'
-        fetch("http://localhost:5000/bookedspot", {
+        fetch("https://obscure-river-55852.herokuapp.com/bookedspot", {
             method: "POST", 
             headers : {'content-type' : 'application/json'},
             body: JSON.stringify(data)

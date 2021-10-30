@@ -5,7 +5,7 @@ import SingleSpot from '../SingleSpot/SingleSpot';
 const TravelSites = () => {
     const [spots, setSpots] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allspots')
+        fetch('https://obscure-river-55852.herokuapp.com/allspots')
         .then(res => res.json())
         .then(data => {
             setSpots(data)
@@ -14,7 +14,7 @@ const TravelSites = () => {
     }, [])
     return (
         <div className="container mb-5">
-            <h1 className="text-primary text-center my-3">Top Travel Spots</h1>
+            <h1 className='fs-1 m-4 text-center'>TOP TRAVEL <span className="text-success">SPOTS</span></h1>
                 <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }}>
                     {
                         spots.map(spot => <SingleSpot key={spot._id} spot={spot} />)

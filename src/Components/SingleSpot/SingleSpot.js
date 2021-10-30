@@ -14,7 +14,7 @@ const SingleSpot = (props) => {
                     <CCardText>
                    {desc}
                     </CCardText>
-                    <Link className="btn btn-primary" to={`/placeorder/${_id}`}>Place Order</Link>
+                    <Link className="btn btn-primary" to={`/placeorder/${_id}`}>Book Now</Link>
                 </CCardBody>
             </CCard>
             </CCol>

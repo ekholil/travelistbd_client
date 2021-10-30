@@ -2,7 +2,7 @@ import React from 'react';
 const NextTrip = () => {
     return (
         <div>
-            <h2 className="text-success text-center mb-3">Get inspiration For your next trip</h2>
+            <h1 className='fs-1 text-center mb-4'>GET <span className="text-success">INSPIRATION</span> FOR YOUR NEXT TRIP</h1>
             <div className="container">
                 <div className="row">
                     <div className="col-md-4" style={{position: 'relative', cursor: 'pointer'}}>

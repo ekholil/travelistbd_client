@@ -9,7 +9,7 @@ const AddSpot = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-      fetch('http://localhost:5000/addspot', {
+      fetch('https://obscure-river-55852.herokuapp.com/addspot', {
           method: 'POST', 
           headers: {'content-type' : 'application/json'},
           body : JSON.stringify(data)

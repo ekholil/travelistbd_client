@@ -5,6 +5,7 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import ManageBooking from './Components/ManageBooking/ManageBooking';
 import Mybooking from './Components/MyBooking/Mybooking';
 import PlaceOrder from './Components/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
@@ -34,6 +35,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute path="/mybooking">
           <Mybooking />
+        </PrivateRoute>
+        <PrivateRoute path="/managebooking">
+          <ManageBooking />
         </PrivateRoute>
       </Switch>
       <Footer />
