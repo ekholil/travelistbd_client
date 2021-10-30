@@ -30,7 +30,7 @@ return (
               {user.email?<Link className="btn" to="/mybooking">My Bookings</Link>:''}
             </CNavItem>
             <CNavItem>
-              {user.email? <Link className="btn" to="/managebooking">Manage All Bookings</Link>:''}
+              {user.email? <Link className="btn" to="/manage">Manage All Bookings</Link>:''}
             </CNavItem>
             <CNavItem>
               {user.email?<Link className="btn" to="/addspot">Add a Spot</Link>:''}

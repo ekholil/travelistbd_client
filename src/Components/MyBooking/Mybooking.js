@@ -1,4 +1,4 @@
-import { CButton, CCard, CCardBody, CCardImage, CCardText, CCardTitle, CCol, CRow } from '@coreui/react';
+import { CCard, CCardBody, CCardImage, CCardTitle, CCol, CRow } from '@coreui/react';
 import React, { useEffect, useState } from 'react';
 import swal from "sweetalert";
 import UseAuth from '../../Hooks/UseAuth';
